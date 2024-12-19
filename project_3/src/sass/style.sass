@@ -6,32 +6,88 @@ $first-text-color: #CFC3C3
 $second-text-color: #000000
 $accent-text-color: #D52927
 
+@font-face
+    font-family: "Roboto"
+    src: url('../font/Roboto.tft')
+    font-weight: regular
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: "JetBrainsMono"
+    src: url(../font/JetBrainsMono-Regular.ttf)
+    font-weight: regular
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: "KellySlab"
+    src: url(../font/KellySlab-Regular.ttf)
+    font-weight: regular
+    font-style: normal
+    font-display: swap
+
 html
     background: #AB9C9C
 
+.container
+    max-width: 1340px
+    margin: 0 auto
+
 .main-section
-    position: relative
-    width: 100vp
-    height: 800px
+    height: 700px
     background-color: $main-color
+    overflow: hidden
+    &__content-container
+        display: flex
+        flex-direction: row
+        align-items: center
 .left-wrapper
+    display: flex
+    flex-direction: column
+    line-height: 1.2
     &__title
+        font-family: "KellySlab"
         font-size: 128px
+        position: relative
         color: $first-text-color
+        margin-bottom: 30px
     &__text
         font-size: 46px
         color: $first-text-color
+        font-family: "KellySlab"
     &__span
         color: $accent-text-color
+    &__hover_1
+        position: absolute
+        width: 368px
+        border: none
+        border-top: 6px solid
+        margin: 0px
+    &__hover_2
+        position: absolute
+        width: 562px
+        border: none
+        border-top: 6px solid
+        margin: 0px
 
 .right-wrapper
     position: relative
+    left: -109px
+
+.second-section
+    height: 700px
     display: flex
-    &__img
+    align-items: center
+    justify-content: space-around
+    &__left-wrapper
         display: flex
-        position: relative
-        justify-content: flex-start
-        left: 5px
-        top: -100px
-        width: 1026px
-        height: 800px
+        flex-direction: column
+        align-items: center
+
+.block
+    display: flex
+    width: 350px
+
+.img
+    margin-right: 25px
